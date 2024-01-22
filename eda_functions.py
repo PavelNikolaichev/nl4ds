@@ -37,7 +37,7 @@ default_dpi = 120
 
 # Setting data folder path
 global data_folder_path
-data_folder_path = '/content/drive/MyDrive/HIST SHU 239 NYC 2024 CoLab/'
+data_folder_path = '/content/drive/MyDrive/HIST SHU 239 NYC 2024 CoLab/CoLab Data/'
 
 
 # -------------------------------------Data Selection----------------------------------------------

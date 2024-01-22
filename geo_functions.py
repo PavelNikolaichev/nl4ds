@@ -112,7 +112,7 @@ street_name_matching_mapping = {}
 while True:
   data_folder_choice = "NYU"
   if data_folder_choice.startswith('n'):
-    data_folder_path = '/content/drive/MyDrive/HIST SHU 239 NYC 2024 CoLab'
+    data_folder_path = '/content/drive/MyDrive/HIST SHU 239 NYC 2024 CoLab/CoLab Data'
     break
   else:
     pass
