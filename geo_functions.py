@@ -110,12 +110,9 @@ global street_name_matching_mapping
 street_name_matching_mapping = {}
 
 while True:
-  data_folder_choice = input('NYU or Columbia Data Folder?').lower()
+  data_folder_choice = "NYU"
   if data_folder_choice.startswith('n'):
-    data_folder_path = '/content/drive/Shareddrives/Humanities Research Lab - Shanghai/colab_playground/playground_data'
-    break
-  elif data_folder_choice.startswith('c'):
-    data_folder_path = '/content/drive/MyDrive/HNYC_2022/geocoder/data'
+    data_folder_path = '/content/drive/MyDrive/HIST SHU 239 NYC 2024 CoLab'
     break
   else:
     pass
