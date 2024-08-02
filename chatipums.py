@@ -3,7 +3,7 @@ import os
 os.system('pip install ipumspy')
 clear_output()
 
-from ipumspy import IpumsApiClient, UsaExtract, readers
+from ipumspy import IpumsApiClient, MicrodataExtract, readers
 IPUMS_API_KEY = input("Your IPUMS API Key: (Acquire it at https://account.ipums.org/api_keys if you don't have one yet)")
 clear_output()
 ipums = IpumsApiClient(IPUMS_API_KEY)
@@ -34,7 +34,7 @@ pd.set_option('chained_assignment',None)
 def flatten_list(l):
     return [item for sublist in l for item in sublist]
 
-from google.colab import data_table
+# from google.colab import data_table
 
 sample_table = pd.read_html('https://usa.ipums.org/usa-action/samples/sample_ids')[-1]
 sample_table['year'] = sample_table['Sample ID'].apply(lambda x: x[2:-1])
@@ -156,7 +156,8 @@ https://usa.ipums.org/usa-action/variables/{variable_code_to_filter_by}#codes_se
         if create_decision.lower()[0]=='y':
             break
 
-    extract = UsaExtract(
+    extract = MicrodataExtract(
+        "usa",
         sample_id_list,
         variables_list,
         data_format="csv",
